@@ -21,7 +21,7 @@ def main():
         board.draw_board()
         finished = input(
             "Press enter continue and 'q' to quit\n> ")
-        if finished.lower() == "quit":
+        if finished.lower() == "q":
             print("Program terminated")
 
 
