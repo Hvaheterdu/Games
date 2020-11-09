@@ -1,7 +1,6 @@
 #!/user/bin/env python3
 from gameboard import GameBoard
 import argparse
-import textwrap
 
 
 def main():
