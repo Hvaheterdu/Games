@@ -11,7 +11,6 @@ class GameBoard:
         """ Constructor """
         self._row = row
         self._column = column
-        # Create Cell object for each y row and x column
         self._grid = [[Cell() for y in range(self._row)]
                       for x in range(self._column)]
         self.generation_num = 0
@@ -22,7 +21,7 @@ class GameBoard:
         os.system("clear")
         for x in range(self._column):
             for y in range(self._row):
-                print(self._grid[x][y].get_status(), end="")
+                print(self._grid[x][y].get_status(), end='')
             print()
         print(
             f"Generation: {self.generation_num} - Living cells: {self.find_all_alive()}")
