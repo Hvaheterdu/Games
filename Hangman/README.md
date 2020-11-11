@@ -15,7 +15,3 @@ $ python3 main.py
 And the game will start.
 
 The *src* folder contains source files.
-
-## Future features
-
-1. Make it two-player game on same machine
