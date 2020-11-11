@@ -17,7 +17,7 @@ def main():
 
     # Program loop
     finished = "a"
-    while finished != "quit":
+    while finished != 'q':
         board.draw_board()
         finished = input(
             "Press enter continue and 'q' to quit\n> ")
