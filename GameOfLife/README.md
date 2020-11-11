@@ -12,6 +12,7 @@ Enter the src folder and type
 ```
 $ python3 main.py -h
 ```
-Since the program uses argparse, an information table will appear with description on how to run the program
+
+Since the program uses *argparse*, an information table will appear with a description on how to run the program
 
 The *src* folder contains source files.
