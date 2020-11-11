@@ -38,12 +38,6 @@ class Game:
             if computer_choice == player_choice.capitalize():
                 print(f"\nComputer chooses {computer_choice}\n")
                 print("It's a draw. Nobody gets any points\n")
-            elif computer_choice == player_choice.capitalize():
-                print(f"\nComputer chooses {computer_choice}\n")
-                print("It's a draw. Nobody gets any points\n")
-            elif computer_choice == player_choice.capitalize():
-                print(f"\nComputer chooses {computer_choice}\n")
-                print("It's a draw. Nobody gets any points\n")
 
             # Computer wins
             if computer_choice == ROCK and player_choice.capitalize() == SCISSOR:
