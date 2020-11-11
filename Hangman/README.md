@@ -1,8 +1,8 @@
 # Hangman
 
-This is a simple Hangman game between you and the computer.
+This is a simple Hangman game that is GUI based.
 
-This game is terminal based.
+The words that are used are all from the english dictionary and are choosen at random for each game.
 
 ## How to run
 
@@ -18,4 +18,4 @@ The *src* folder contains source files.
 
 ## Future features
 
-1. Make game with GUI
+1. Make it two-player game on same machine
