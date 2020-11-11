@@ -2,9 +2,7 @@
 
 This is a simple rock-paper-scissor game between you and the computer.
 
-The computer is doing it's calculations based on the Random class.
-
-This game is terminal based. The chosen hand and result is outputted to the terminal.
+This game is terminal based.
 
 ## Future features
 
