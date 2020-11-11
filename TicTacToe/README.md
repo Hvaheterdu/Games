@@ -19,4 +19,3 @@ The *src* folder contains source files.
 ## Future features
 
 1. Make GUI
-2. Make AI based
