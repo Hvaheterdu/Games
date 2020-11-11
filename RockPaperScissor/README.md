@@ -1,6 +1,6 @@
 # RockPaperScissor
 
-This is a simple rock-paper-scissor game between you and the computer.
+This is a simple Rock paper scissor game between you and the computer.
 
 This game is terminal based.
 
