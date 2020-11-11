@@ -16,3 +16,7 @@ $ python3 main.py -h
 Since the program uses *argparse*, an information table will appear with a description on how to run the program
 
 The *src* folder contains source files.
+
+## Future features
+
+1. Make game with GUI
