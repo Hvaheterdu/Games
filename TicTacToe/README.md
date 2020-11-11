@@ -18,4 +18,4 @@ The *src* folder contains source files.
 
 ## Future features
 
-1. Make GUI
+1. Make game with GUI
