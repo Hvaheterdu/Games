@@ -18,7 +18,7 @@ class GameBoard:
 
     def draw_board(self):
         """ Draw game board """
-        os.system("clear")
+        os.system('clear')
         for x in range(self._column):
             for y in range(self._row):
                 print(self._grid[x][y].get_status(), end='')
