@@ -1,4 +1,6 @@
-#!/user/bin/env python3
+#!/usr/bin/env python3
+
+
 class Cell:
     """ Class represents a cell in the overall game board """
 
