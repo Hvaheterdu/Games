@@ -9,7 +9,7 @@ It is currently terminal based and uses the terminal for input/output.
 Download/Clone the repo and enter the src folder and type
 
 ```
-$ python3 game.py 
+$ python3 main.py 
 ```
 
 in your terminal window and the game will start.
