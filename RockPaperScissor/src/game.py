@@ -58,7 +58,7 @@ class Game:
 
         # Rectangles to cover text to avoid overlay
         cover_left = self._create_rect(WIDTH - 895, HEIGHT - 140, 180, 58)
-        cover_middle = self._create_rect(WIDTH - 800, HEIGHT - 260, 700, 30)
+        cover_middle = self._create_rect(WIDTH - 800, HEIGHT - 260, 530, 30)
         cover_right = self._create_rect(WIDTH - 350, HEIGHT - 190, 300, 80)
 
         # Draw on screen
@@ -108,7 +108,7 @@ class Game:
                         player_score = player_score
 
             # Add title and text on the buttons
-            self._draw_title(self.screen, 'Welcome to Rock Paper Scissor')
+            self._draw_title(self.screen, 'Rock Paper Scissor')
             self._draw_rect(self.screen, BUTTON_COLOUR, rock)
             self._add_rect_text(self.screen, 'Rock', rock)
             self._draw_rect(self.screen, BUTTON_COLOUR, paper)
@@ -131,13 +131,13 @@ class Game:
                     self.screen, 'Let the game begin! Start by choosing an action', WIDTH - 500, HEIGHT - 250)
             elif ret == 1:
                 self._set_text(
-                    self.screen, 'Player wins! That is one point to the player', WIDTH - 500, HEIGHT - 250)
+                    self.screen, 'Player wins', WIDTH - 500, HEIGHT - 250)
             elif ret == 2:
                 self._set_text(
-                    self.screen, 'Computer wins! That is one point to the computer', WIDTH - 500, HEIGHT - 250)
+                    self.screen, 'Computer wins', WIDTH - 500, HEIGHT - 250)
             else:
                 self._set_text(
-                    self.screen, 'Its a draw! No one gets a point', WIDTH - 500, HEIGHT - 250)
+                    self.screen, 'Its a draw', WIDTH - 500, HEIGHT - 250)
 
             # Update screen for each new event
             pygame.display.update()
