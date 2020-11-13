@@ -18,6 +18,7 @@ This is an example of how the game looks when you play it
 
 <img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png" width="700">
 
+
 ## How to run
 
 Download/Clone the repo and enter the src folder and type
