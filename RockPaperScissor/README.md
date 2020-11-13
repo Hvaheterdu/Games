@@ -10,6 +10,10 @@ Better solutions are most likely out there, but this was my first go at using th
 
 As said, this is a very simple GUI and looks like
 
+![image](https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/home_screen.png)
+
+![image](https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png)
+
 ## How to run
 
 Download/Clone the repo and enter the src folder and type
