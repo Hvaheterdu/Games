@@ -57,8 +57,8 @@ class Game:
         scissor = self._create_rect(250, 600, 80, 40)
 
         # Rectangles to cover text to avoid overlay
-        cover_left = self._create_rect(WIDTH - 895, HEIGHT - 140, 180, 58)
-        cover_middle = self._create_rect(WIDTH - 800, HEIGHT - 260, 530, 30)
+        cover_left = self._create_rect(WIDTH - 920, HEIGHT - 140, 230, 58)
+        cover_middle = self._create_rect(WIDTH - 800, HEIGHT - 260, 555, 30)
         cover_right = self._create_rect(WIDTH - 350, HEIGHT - 190, 300, 80)
 
         # Draw on screen
