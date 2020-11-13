@@ -118,10 +118,10 @@ class Game:
 
             # Add computer choice, player score and computer score
             x, y = self._rect_pos(rock)
+            self._show_score(
+                self.screen, f'Player score: {player_score}', WIDTH - 810, HEIGHT - 125)
             self._set_text(
                 self.screen, f'Computer choose: {computer_choice}', x + 700, y)
-            self._show_score(
-                self.screen, f'Player score: {player_score}', WIDTH - 815, HEIGHT - 125)
             self._show_score(
                 self.screen, f'Computer score: {computer_score}', WIDTH - 210, HEIGHT - 125)
 
