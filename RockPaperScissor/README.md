@@ -10,9 +10,9 @@ Better solutions are most likely out there, but this was my first go at using th
 
 As said, this is a very simple GUI and looks like
 
-![image](https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/home_screen.png)
+<img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/home_screen.png" width="48">
 
-![image](https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png)
+<img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png" width="48">
 
 ## How to run
 
