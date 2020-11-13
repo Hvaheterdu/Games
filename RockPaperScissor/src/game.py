@@ -11,7 +11,7 @@ BUTTON_COLOUR = (153, 204, 255)
 WHITE = (255, 255, 255)
 TEXT_COLOUR = (0, 0, 0)
 
-# Current working directory
+# Current directory for this file
 THIS_FOLDER = os.path.dirname(os.path.realpath(__file__))
 
 # Images used
