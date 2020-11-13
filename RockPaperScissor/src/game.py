@@ -98,14 +98,14 @@ class Game:
                             IMG[rand], 300, 300), (650, 200))
                         ret = self._compute(computer_choice, SCISSOR)
 
-                    # Set correct scores
-                    if ret == 1:
-                        player_score += 1
-                    elif ret == 2:
-                        computer_score += 1
-                    else:
-                        computer_score = computer_score
-                        player_score = player_score
+                        # Set correct scores
+                        if ret == 1:
+                            player_score += 1
+                        elif ret == 2:
+                            computer_score += 1
+                        else:
+                            computer_score = computer_score
+                            player_score = player_score
 
             # Add title and text on the buttons
             self._draw_title(self.screen, 'Rock Paper Scissor')
