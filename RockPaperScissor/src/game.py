@@ -97,15 +97,17 @@ class Game:
                         self.screen.blit(self._scale_image(
                             IMG[rand], 300, 300), (650, 200))
                         ret = self._compute(computer_choice, SCISSOR)
+                    else:
+                        continue
 
-                        # Set correct scores
-                        if ret == 1:
-                            player_score += 1
-                        elif ret == 2:
-                            computer_score += 1
-                        else:
-                            computer_score = computer_score
-                            player_score = player_score
+                    # Set correct scores
+                    if ret == 1:
+                        player_score += 1
+                    elif ret == 2:
+                        computer_score += 1
+                    else:
+                        computer_score == computer_score
+                        player_score == player_score
 
             # Add title and text on the buttons
             self._draw_title(self.screen, 'Rock Paper Scissor')
@@ -130,17 +132,17 @@ class Game:
                 self._set_text(
                     self.screen, 'Let the game begin! Start by choosing an action', WIDTH - 500, HEIGHT - 250)
             elif ret == 1:
-                self._set_text(
-                    self.screen, 'Player wins', WIDTH - 500, HEIGHT - 250)
+                self._set_text(self.screen, 'Player wins',
+                               WIDTH - 500, HEIGHT - 250)
             elif ret == 2:
-                self._set_text(
-                    self.screen, 'Computer wins', WIDTH - 500, HEIGHT - 250)
+                self._set_text(self.screen, 'Computer wins',
+                               WIDTH - 500, HEIGHT - 250)
             else:
-                self._set_text(
-                    self.screen, 'Its a draw', WIDTH - 500, HEIGHT - 250)
+                self._set_text(self.screen, 'Its a draw',
+                               WIDTH - 500, HEIGHT - 250)
 
             # Update screen for each new event
-            pygame.display.update()
+            pygame.display.flip()
 
             # Draw new rectangles to hide old text
             self._draw_rect(self.screen, WHITE, cover_left)
