@@ -9,7 +9,7 @@ The words that are used are all from the english dictionary and are choosen at r
 Download/Clone the repo and enter the src folder and type
 
 ```
-$ python3 game.py 
+$ python3 main.py 
 ```
 
 in your terminal window and the game will start.
