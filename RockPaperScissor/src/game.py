@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from random import Random
 import pygame
+import os
 
 
 # Colour and screen size
@@ -10,13 +11,15 @@ BUTTON_COLOUR = (153, 204, 255)
 WHITE = (255, 255, 255)
 TEXT_COLOUR = (0, 0, 0)
 
+# Current working directory
+THIS_FOLDER = os.path.abspath(os.getcwd())
+
 # Images used
-ROCK_IMG = pygame.image.load(
-    r'C:\Users\burha\Documents\Projects\New folder\src\image\rock.jpg')
-PAPER_IMG = pygame.image.load(
-    r'C:\Users\burha\Documents\Projects\New folder\src\image\paper.png')
+ROCK_IMG = pygame.image.load(os.path.join(THIS_FOLDER, r'src\image\rock.jpg'))
+PAPER_IMG = pygame.image.load(os.path.join(
+    THIS_FOLDER, r'src\image\paper.png'))
 SCISSOR_IMG = pygame.image.load(
-    r'C:\Users\burha\Documents\Projects\New folder\src\image\scissor.jpg')
+    os.path.join(THIS_FOLDER, r'src\image\scissor.jpg'))
 IMG = [ROCK_IMG, PAPER_IMG, SCISSOR_IMG]
 
 # Player actions
