@@ -57,9 +57,9 @@ class Game:
         scissor = self._create_rect(250, 600, 80, 40)
 
         # Rectangles to cover text to avoid overlay
-        cover_left = self._create_rect(260, 1032, 180, 58)
-        cover_middle = self._create_rect(500, 900, 700, 30)
-        cover_right = self._create_rect(1020, 1000, 300, 100)
+        cover_left = self._create_rect(WIDTH - 895, HEIGHT - 140, 180, 58)
+        cover_middle = self._create_rect(WIDTH - 800, HEIGHT - 260, 700, 30)
+        cover_right = self._create_rect(WIDTH - 350, HEIGHT - 190, 300, 80)
 
         # Draw on screen
         running = True
@@ -79,23 +79,23 @@ class Game:
                     if rock.collidepoint(mouse_pos):
                         computer_choice = CHOICES[rand]
                         self.screen.blit(self._scale_image(
-                            ROCK_IMG, 500, 500), (100, 300))
+                            ROCK_IMG, 300, 300), (45, 200))
                         self.screen.blit(self._scale_image(
-                            IMG[rand], 500, 500), (900, 300))
+                            IMG[rand], 300, 300), (650, 200))
                         ret = self._compute(computer_choice, ROCK)
                     elif paper.collidepoint(mouse_pos):
                         computer_choice = CHOICES[rand]
                         self.screen.blit(self._scale_image(
-                            PAPER_IMG, 500, 500), (100, 300))
+                            PAPER_IMG, 300, 300), (45, 200))
                         self.screen.blit(self._scale_image(
-                            IMG[rand], 500, 500), (900, 300))
+                            IMG[rand], 300, 300), (650, 200))
                         ret = self._compute(computer_choice, PAPER)
                     elif scissor.collidepoint(mouse_pos):
                         computer_choice = CHOICES[rand]
                         self.screen.blit(self._scale_image(
-                            SCISSOR_IMG, 500, 500), (100, 300))
+                            SCISSOR_IMG, 300, 300), (45, 200))
                         self.screen.blit(self._scale_image(
-                            IMG[rand], 500, 500), (900, 300))
+                            IMG[rand], 300, 300), (650, 200))
                         ret = self._compute(computer_choice, SCISSOR)
 
                     # Set correct scores
@@ -119,25 +119,25 @@ class Game:
             # Add computer choice, player score and computer score
             x, y = self._rect_pos(rock)
             self._set_text(
-                self.screen, f'Computer choose: {computer_choice}', x + 960, y)
+                self.screen, f'Computer choose: {computer_choice}', x + 700, y)
             self._show_score(
-                self.screen, f'Player score: {player_score}', WIDTH - 1150, HEIGHT - 125)
+                self.screen, f'Player score: {player_score}', WIDTH - 815, HEIGHT - 125)
             self._show_score(
-                self.screen, f'Computer score: {computer_score}', WIDTH - 340, HEIGHT - 125)
+                self.screen, f'Computer score: {computer_score}', WIDTH - 210, HEIGHT - 125)
 
             # Set info text
             if player_score == 0 and computer_score == 0:
                 self._set_text(
-                    self.screen, 'Let the game begin! Start by choosing an action', WIDTH - 750, HEIGHT - 280)
+                    self.screen, 'Let the game begin! Start by choosing an action', WIDTH - 500, HEIGHT - 250)
             elif ret == 1:
                 self._set_text(
-                    self.screen, 'Player wins! That is one point to the player', WIDTH - 750, HEIGHT - 280)
+                    self.screen, 'Player wins! That is one point to the player', WIDTH - 500, HEIGHT - 250)
             elif ret == 2:
                 self._set_text(
-                    self.screen, 'Computer wins! That is one point to the computer', WIDTH - 750, HEIGHT - 280)
+                    self.screen, 'Computer wins! That is one point to the computer', WIDTH - 500, HEIGHT - 250)
             else:
                 self._set_text(
-                    self.screen, 'Its a draw! No one gets a point', WIDTH - 750, HEIGHT - 280)
+                    self.screen, 'Its a draw! No one gets a point', WIDTH - 500, HEIGHT - 250)
 
             # Update screen for each new event
             pygame.display.update()
