@@ -8,9 +8,11 @@ Better solutions are most likely out there, but this was my first go at using th
 
 ## GUI
 
-As said, this is a very simple GUI and looks like
+As said, this is a very simple GUI.
 
-<img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/home_screen.png" width="48">
+When you start the program you are greeted with a "home screen", that looks like
+
+<img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/home_screen.png" width="100">
 
 <img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png" width="48">
 
