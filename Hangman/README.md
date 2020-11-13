@@ -6,12 +6,12 @@ The words that are used are all from the english dictionary and are choosen at r
 
 ## How to run
 
-Enter the src folder and type
+Download/Clone the repo and enter the src folder and type
 
 ```
-$ python3 main.py 
+$ python3 game.py 
 ```
 
-And the game will start.
+in your terminal window and the game will start.
 
 The *src* folder contains source files.

@@ -6,13 +6,13 @@ It is currently terminal based and uses the terminal for input/output.
 
 ## How to run
 
-Enter the src folder and type
+Download/Clone the repo and enter the src folder and type
 
 ```
-$ python3 main.py
+$ python3 game.py 
 ```
 
-The game will start and since the game is terminal based you will be told what you need to do.
+in your terminal window and the game will start.
 
 The *src* folder contains source files.
 
