@@ -5,14 +5,14 @@ import os
 
 
 # Colour and screen size
-WIDTH = 1500
-HEIGHT = 1200
+WIDTH = 1000
+HEIGHT = 800
 BUTTON_COLOUR = (153, 204, 255)
 WHITE = (255, 255, 255)
 TEXT_COLOUR = (0, 0, 0)
 
 # Current working directory
-THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+THIS_FOLDER = os.path.dirname(os.path.realpath(__file__))
 
 # Images used
 ROCK_IMG = pygame.image.load(os.path.join(THIS_FOLDER, 'image/rock.jpg'))
@@ -52,9 +52,9 @@ class Game:
         pygame.display.set_caption('Rock Paper Scissor')
 
         # Create rectangles that will become buttons
-        rock = self._create_rect(150, 1000, 100, 40)
-        paper = self._create_rect(300, 1000, 100, 40)
-        scissor = self._create_rect(450, 1000, 100, 40)
+        rock = self._create_rect(50, 600, 80, 40)
+        paper = self._create_rect(150, 600, 80, 40)
+        scissor = self._create_rect(250, 600, 80, 40)
 
         # Rectangles to cover text to avoid overlay
         cover_left = self._create_rect(260, 1032, 180, 58)
