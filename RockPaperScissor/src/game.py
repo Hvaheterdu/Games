@@ -1,10 +1,25 @@
 #!/usr/bin/env python3
-from player import Player
-import random
-import os
-import time
+from random import Random
+import pygame
 
 
+# Colour and screen size
+WIDTH = 1500
+HEIGHT = 1200
+BUTTON_COLOUR = (153, 204, 255)
+WHITE = (255, 255, 255)
+TEXT_COLOUR = (0, 0, 0)
+
+# Images used
+ROCK_IMG = pygame.image.load(
+    r'C:\Users\burha\Documents\Projects\New folder\src\image\rock.jpg')
+PAPER_IMG = pygame.image.load(
+    r'C:\Users\burha\Documents\Projects\New folder\src\image\paper.png')
+SCISSOR_IMG = pygame.image.load(
+    r'C:\Users\burha\Documents\Projects\New folder\src\image\scissor.jpg')
+IMG = [ROCK_IMG, PAPER_IMG, SCISSOR_IMG]
+
+# Player actions
 ROCK = "Rock"
 PAPER = "Paper"
 SCISSOR = "Scissor"
@@ -12,64 +27,242 @@ CHOICES = [ROCK, PAPER, SCISSOR]
 
 
 class Game:
-    """ Game class """
 
-    def play(self, player):
-        """ Method we run the game from """
-        self.compute(player)
+    def __init__(self) -> None:
+        """ Constructor """
+        pygame.init()
 
-    def compute(self, player):
-        """Compute who wins when. Computer choices are made
-        by random"""
+    def play(self) -> None:
+        """ Start the game """
+        self._draw()
+
+    def _draw(self) -> None:
+        """ Create elements and draw the game """
+        computer_choice = 0
         computer_score = 0
         player_score = 0
-        computer_choice = random.choice(CHOICES)
+        ret = 0
 
-        while True:
-            player_choice = input(
-                "Rock, Paper og Scissor? Press 'q' to exit the game\n> ")
+        # Create screen, fill background and add window title
+        self.screen = self._create_screen()
+        self.screen.fill(WHITE)
+        pygame.display.set_caption('Rock Paper Scissor')
 
-            # Quit program
-            if player_choice == 'q':
-                print("Game terminated")
-                break
+        # Create rectangles that will become buttons
+        rock = self._create_rect(150, 1000, 100, 40)
+        paper = self._create_rect(300, 1000, 100, 40)
+        scissor = self._create_rect(450, 1000, 100, 40)
 
-            # Draw
-            if computer_choice == player_choice.capitalize():
-                print(f"\nComputer chooses {computer_choice}\n")
-                print("It's a draw. Nobody gets any points\n")
+        # Rectangles to cover text to avoid overlay
+        cover_left = self._create_rect(260, 1032, 180, 58)
+        cover_middle = self._create_rect(500, 900, 700, 30)
+        cover_right = self._create_rect(1020, 1000, 300, 100)
 
-            # Computer wins
-            if computer_choice == ROCK and player_choice.capitalize() == SCISSOR:
-                computer_score += 1
-                print(f"\nComputer chooses {computer_choice}\n")
-                print("Computer wins. Computer gets one point\n")
-            elif computer_choice == PAPER and player_choice.capitalize() == ROCK:
-                computer_score += 1
-                print(f"\nComputer chooses {computer_choice}\n")
-                print("Computer wins. Computer gets one point\n")
-            elif computer_choice == SCISSOR and player_choice.capitalize() == PAPER:
-                computer_score += 1
-                print(f"\nComputer chooses {computer_choice}\n")
-                print("Computer wins. Computer gets one point\n")
+        # Draw on screen
+        running = True
+        while running:
+            for event in pygame.event.get():
+                # Quit if window is closed
+                if event.type == pygame.QUIT:
+                    running = False
+                # Change layout when player takes action
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    # Mouse position and random generator
+                    mouse_pos = pygame.mouse.get_pos()
+                    rand = Random().randint(0, 2)
+                    # If player pressed on a given button;
+                    # output image, show winner and update
+                    # points. Checks if mouse is over button
+                    if rock.collidepoint(mouse_pos):
+                        computer_choice = CHOICES[rand]
+                        self.screen.blit(self._scale_image(
+                            ROCK_IMG, 500, 500), (100, 300))
+                        self.screen.blit(self._scale_image(
+                            IMG[rand], 500, 500), (900, 300))
+                        ret = self._compute(computer_choice, ROCK)
+                    elif paper.collidepoint(mouse_pos):
+                        computer_choice = CHOICES[rand]
+                        self.screen.blit(self._scale_image(
+                            PAPER_IMG, 500, 500), (100, 300))
+                        self.screen.blit(self._scale_image(
+                            IMG[rand], 500, 500), (900, 300))
+                        ret = self._compute(computer_choice, PAPER)
+                    elif scissor.collidepoint(mouse_pos):
+                        computer_choice = CHOICES[rand]
+                        self.screen.blit(self._scale_image(
+                            SCISSOR_IMG, 500, 500), (100, 300))
+                        self.screen.blit(self._scale_image(
+                            IMG[rand], 500, 500), (900, 300))
+                        ret = self._compute(computer_choice, SCISSOR)
 
-            # Player wins
-            if player_choice.capitalize() == ROCK and computer_choice == SCISSOR:
-                player_score += 1
-                print(f"\nComputer chooses {computer_choice}\n")
-                print(
-                    f"{player.get_name()} wins. {player.get_name()} gets one point\n")
-            elif player_choice.capitalize() == PAPER and computer_choice == ROCK:
-                player_score += 1
-                print(f"\nComputer chooses {computer_choice}\n")
-                print(
-                    f"{player.get_name()} wins. {player.get_name()} gets one point\n")
-            elif player_choice.capitalize() == SCISSOR and computer_choice == PAPER:
-                player_score += 1
-                print(f"\nComputer chooses {computer_choice}\n")
-                print(
-                    f"{player.get_name()} wins. {player.get_name()} gets one point\n")
+                    # Set correct scores
+                    if ret == 1:
+                        player_score += 1
+                    elif ret == 2:
+                        computer_score += 1
+                    else:
+                        computer_score = computer_score
+                        player_score = player_score
 
-            print("Total scores are: ")
-            print(f"Computer: {computer_score}")
-            print(f"Player:   {player_score}\n")
+            # Add title and text on the buttons
+            self._draw_title(self.screen, 'Welcome to Rock Paper Scissor')
+            self._draw_rect(self.screen, BUTTON_COLOUR, rock)
+            self._add_rect_text(self.screen, 'Rock', rock)
+            self._draw_rect(self.screen, BUTTON_COLOUR, paper)
+            self._add_rect_text(self.screen, 'Paper', paper)
+            self._draw_rect(self.screen, BUTTON_COLOUR, scissor)
+            self._add_rect_text(self.screen, 'Scissor', scissor)
+
+            # Add computer choice, player score and computer score
+            x, y = self._rect_pos(rock)
+            self._set_text(
+                self.screen, f'Computer choose: {computer_choice}', x + 960, y)
+            self._show_score(
+                self.screen, f'Player score: {player_score}', WIDTH - 1150, HEIGHT - 125)
+            self._show_score(
+                self.screen, f'Computer score: {computer_score}', WIDTH - 340, HEIGHT - 125)
+
+            # Set info text
+            if player_score == 0 and computer_score == 0:
+                self._set_text(
+                    self.screen, 'Let the game begin! Start by choosing an action', WIDTH - 750, HEIGHT - 280)
+            elif ret == 1:
+                self._set_text(
+                    self.screen, 'Player wins! That is one point to the player', WIDTH - 750, HEIGHT - 280)
+            elif ret == 2:
+                self._set_text(
+                    self.screen, 'Computer wins! That is one point to the computer', WIDTH - 750, HEIGHT - 280)
+            else:
+                self._set_text(
+                    self.screen, 'Its a draw! No one gets a point', WIDTH - 750, HEIGHT - 280)
+
+            # Update screen for each new event
+            pygame.display.update()
+
+            # Draw new rectangles to hide old text
+            self._draw_rect(self.screen, WHITE, cover_left)
+            self._draw_rect(self.screen, WHITE, cover_middle)
+            self._draw_rect(self.screen, WHITE, cover_right)
+
+        # Quit pygame and program
+        pygame.quit()
+        quit()
+
+    def _compute(self, computer_choice, player_choice):
+        """Compute who wins the round and update scores
+
+        Args:
+            computer_choice (str): computer's action
+            player_choice (str): player's action
+
+        Returns:
+            int: 1 -> player wins, 2 -> computer wins
+        """
+        # Compute winner
+        if (player_choice == ROCK and computer_choice == SCISSOR
+            or player_choice == PAPER and computer_choice == ROCK
+                or player_choice == SCISSOR and computer_choice == PAPER):
+            return 1
+        elif (computer_choice == ROCK and player_choice == SCISSOR
+              or computer_choice == PAPER and player_choice == ROCK
+                or computer_choice == SCISSOR and player_choice == PAPER):
+            return 2
+
+    def _set_font(self, inp, font, size, colour):
+        """Set font for text
+
+        Args:
+            inp (str): text to input
+            font (str): font type
+            size (int): text size
+            colour (rgb): text colour
+
+        Returns:
+            pygame.font.Font: return font object
+        """
+        self._font = pygame.font.SysFont(font, size)
+        self._text = self._font.render(inp, True, colour)
+        self._text_rect = self._text.get_rect()
+        return self._text, self._text_rect
+
+    def _rect_pos(self, rect_obj) -> tuple:
+        """ Return x, y coordinate for center of rectangle """
+        return rect_obj.centerx, rect_obj.centery
+
+    def _create_screen(self) -> pygame.Surface:
+        """ Create screen to draw on """
+        return pygame.display.set_mode((WIDTH, HEIGHT))
+
+    def _create_rect(self, x, y, width, height) -> pygame.rect.Rect:
+        """ Create rectangle with width and height on x and y coordinate """
+        return pygame.Rect(x, y, width, height)
+
+    def _show_score(self, screen, inp, x, y):
+        """Show score of each player in the game
+
+        Args:
+            screen (pygame.Surface): screen to draw on
+            inp (str): text input
+            x (int): x coordinate
+            y (int): y coordinate
+        """
+        self._text, self._text_rect = self._set_font(
+            inp, 'Calibri', 24, TEXT_COLOUR)
+        self._text_rect.center = (x, y)
+        screen.blit(self._text, self._text_rect)
+
+    def _add_rect_text(self, screen, inp, rect_obj):
+        """Add text to rectangle object
+
+        Args:
+            screen (pygame.Surface): screen to draw on
+            inp (str): text input
+            rect_obj (pygame.rect.Rect): rectangle object
+        """
+        self._text, self._text_rect = self._set_font(
+            inp, 'Calibri', 24, TEXT_COLOUR)
+        x, y = self._rect_pos(rect_obj)
+        self._text_rect.center = (x, y)
+        screen.blit(self._text, self._text_rect)
+
+    def _set_text(self, screen, inp, x, y):
+        """Set text to screen
+
+        Args:
+            screen (pygame.Surface): screen to draw on
+            inp (str): text input
+            x (int): x coordinate
+            y (int): y coordinate
+        """
+        self._text, self._text_rect = self._set_font(
+            inp, 'Calibri', 24, TEXT_COLOUR)
+        self._text_rect.center = (x, y)
+        screen.blit(self._text, self._text_rect)
+
+    def _scale_image(self, image, x, y) -> pygame.Surface:
+        """Scale image to the size you want given as x,y coordinates.
+        These coordinates need to be in a tuple """
+        return pygame.transform.smoothscale(image, (x, y))
+
+    def _draw_rect(self, screen, colour, rect_obj) -> pygame.rect.Rect:
+        """ Draw rectangle on screen with given colour """
+        return pygame.draw.rect(screen, colour, rect_obj)
+
+    def _draw_title(self, screen, inp) -> None:
+        """ Draw title on screen with input inp """
+        self._text, self._text_rect = self._set_font(
+            inp, 'Calibri', 40, TEXT_COLOUR)
+        self._text_rect.center = ((WIDTH / 2), (HEIGHT / 10))
+        screen.blit(self._text, self._text_rect)
+
+
+def main():
+    """ Main method were we start the game """
+
+    # Start game
+    game = Game()
+    game.play()
+
+
+if __name__ == "__main__":
+    main()
