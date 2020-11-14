@@ -7,7 +7,7 @@ import os
 class GameBoard:
     """ Class that creates the game board """
 
-    def __init__(self, row, column):
+    def __init__(self, row, column) -> None:
         """ Constructor """
         self._row = row
         self._column = column
@@ -16,7 +16,7 @@ class GameBoard:
         self.generation_num = 0
         self._generate()
 
-    def draw_board(self):
+    def draw_board(self) -> None:
         """ Draw game board """
         os.system('clear')
         for x in range(self._column):
@@ -27,7 +27,7 @@ class GameBoard:
             f"Generation: {self.generation_num} - Living cells: {self.find_all_alive()}")
         self.update()
 
-    def update(self):
+    def update(self) -> None:
         """ Updates each cell according to the game rules """
         dead_become_alive = []
         alive_become_dead = []
@@ -58,7 +58,7 @@ class GameBoard:
 
         self.generation_num += 1
 
-    def find_all_alive(self):
+    def find_all_alive(self) -> int:
         """ Return all alive cells """
         alive_cells = 0
         for x in range(self._column):
@@ -67,7 +67,7 @@ class GameBoard:
                     alive_cells += 1
         return alive_cells
 
-    def _generate(self):
+    def _generate(self) -> None:
         """ Generate alive cells after game rules """
         for i in range(self._row):
             for j in range(self._column):
@@ -75,7 +75,7 @@ class GameBoard:
                 if rand == 3:
                     self._grid[j][i].set_alive()
 
-    def find_neighbours(self, rows, columns):
+    def find_neighbours(self, rows, columns) -> list:
         """ Return neighbours to every cell """
         neighbours_array = []
         for i in range(-1, 2):

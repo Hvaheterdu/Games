@@ -3,7 +3,7 @@ from gameboard import GameBoard
 import argparse
 
 
-def main():
+def main() -> None:
     """ Creates board and runs the game """
     parser = argparse.ArgumentParser(
         description='Conways Game of life that runs for as many generations as you like')

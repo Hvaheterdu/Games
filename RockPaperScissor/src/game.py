@@ -153,7 +153,7 @@ class Game:
         pygame.quit()
         quit()
 
-    def _compute(self, computer_choice, player_choice):
+    def _compute(self, computer_choice, player_choice) -> int:
         """Compute who wins the round and update scores
 
         Args:
@@ -172,8 +172,9 @@ class Game:
               or computer_choice == PAPER and player_choice == ROCK
                 or computer_choice == SCISSOR and player_choice == PAPER):
             return 2
+        return 0
 
-    def _set_font(self, inp, font, size, colour):
+    def _set_font(self, inp, font, size, colour) -> tuple:
         """Set font for text
 
         Args:
@@ -245,7 +246,7 @@ class Game:
         screen.blit(self._text, self._text_rect)
 
     def _scale_image(self, image, x, y) -> pygame.Surface:
-        """Scale image to the size you want given as x,y coordinates.
+        """Return scaled image of size x, y.
         These coordinates need to be in a tuple """
         return pygame.transform.smoothscale(image, (x, y))
 
