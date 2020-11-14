@@ -262,7 +262,7 @@ class Game:
         screen.blit(self._text, self._text_rect)
 
 
-def main():
+def main() -> None:
     """ Main method were we start the game """
 
     # Start game
