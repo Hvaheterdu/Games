@@ -39,7 +39,7 @@ The first one is usually used on Windows when you only have on Python version in
 
 The second one is usually used on macOS, because the system uses Python@2.7 and typing *pip* instead of *pip3* will install it on Python@2.7
 
-*pip3* makes sure the module is installed on the Python@3.X.X version that you have installed.
+*pip3* makes sure the module is installed on the Python@3.x.x version that you have installed.
 
 ## How to run
 
