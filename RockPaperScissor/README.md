@@ -19,9 +19,31 @@ This is an example of how the game looks when you play it
 <img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png" width="700">
 
 
+## Install packages
+
+Make sure the pygame packages is installed.
+
+If you don't have it installed, it can be installed by typing
+
+```
+$ pip install pygame
+```
+
+or
+
+```
+$ pip3 install pygame
+```
+
+The first one is usually used on Windows when you only have on Python version installed.
+
+The second one is usually used on macOS, because the system uses Python@2.7 and typing *pip* instead of *pip3* will install it on Python@2.7
+
+*pip3* makes sure the module is installed on the Python@3.X.X version that you have installed.
+
 ## How to run
 
-Download/Clone the repo and enter the src folder and type
+To start the game, type
 
 ```
 $ python3 game.py 
