@@ -5,6 +5,6 @@ I attempted to learn javascript, and made a Hangman game with Javascript, HTML a
 
 1. GameOfLife
 2. Hangman
-3. Hangmanv2
+3. Hangman_v2
 4. Rock-Paper-Scissor
 5. TicTacToe
