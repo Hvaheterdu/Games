@@ -16,8 +16,7 @@ THIS_FOLDER = os.path.dirname(os.path.realpath(__file__))
 
 # Images used
 ROCK_IMG = pygame.image.load(os.path.join(THIS_FOLDER, 'image/rock.jpg'))
-PAPER_IMG = pygame.image.load(os.path.join(
-    THIS_FOLDER, 'image/paper.png'))
+PAPER_IMG = pygame.image.load(os.path.join(THIS_FOLDER, 'image/paper.png'))
 SCISSOR_IMG = pygame.image.load(
     os.path.join(THIS_FOLDER, 'image/scissor.jpg'))
 IMG = [ROCK_IMG, PAPER_IMG, SCISSOR_IMG]
