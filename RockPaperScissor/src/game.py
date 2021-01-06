@@ -259,15 +259,3 @@ class Game:
             inp, 'Calibri', 40, TEXT_COLOUR)
         self._text_rect.center = ((WIDTH / 2), (HEIGHT / 10))
         screen.blit(self._text, self._text_rect)
-
-
-def main() -> None:
-    """ Main method were we start the game """
-
-    # Start game
-    game = Game()
-    game.play()
-
-
-if __name__ == "__main__":
-    main()
