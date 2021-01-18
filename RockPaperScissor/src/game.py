@@ -12,7 +12,7 @@ WHITE = (255, 255, 255)
 TEXT_COLOUR = (0, 0, 0)
 
 # Current directory for this file
-THIS_FOLDER = os.path.dirname(os.path.realpath(__file__))
+THIS_FOLDER = os.path.dirname(os.path.dirname(__file__))
 
 # Images used
 ROCK_IMG = pygame.image.load(os.path.join(THIS_FOLDER, 'image/rock.jpg'))
