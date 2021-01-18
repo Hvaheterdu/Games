@@ -2,7 +2,17 @@
 
 This is a simple Hangman game that is GUI based.
 
-The words that are used are all from the english dictionary and are choosen at random for each game.
+The words are choosen at random for each round.
+
+The folder words contains a .txt file with all the words.
+
+I got the words by typing
+
+```
+$ cat /usr/share/dict/words > words.txt
+```
+
+in the terminal. These words are from my MacBook Pro.
 
 ## How to run
 
