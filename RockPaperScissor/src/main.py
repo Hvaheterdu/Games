@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-from game import Game
+from game import RockPaperScissor
 
 
 def main() -> None:
     """ Main method were we start the game """
 
     # Start game
-    game = Game()
+    game = RockPaperScissor()
     game.play()
 
 

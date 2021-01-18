@@ -28,7 +28,7 @@ SCISSOR = "Scissor"
 CHOICES = [ROCK, PAPER, SCISSOR]
 
 
-class Game:
+class RockPaperScissor:
 
     def __init__(self) -> None:
         """ Constructor """
