@@ -8,7 +8,7 @@ PARENT_FOLDER = os.path.dirname(os.path.dirname(__file__))
 WORD_FOLDER = os.path.join(PARENT_FOLDER + '/words')
 
 
-class Game:
+class Hangman:
 
     def __init__(self) -> None:
         """ Constructor """
