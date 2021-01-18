@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 import pygame
+import random
+import os
+
+
+PARENT_FOLDER = os.path.dirname(os.path.dirname(__file__))
+WORD_FOLDER = os.path.join(PARENT_FOLDER + '/words')
 
 
 class Game:
@@ -14,4 +20,11 @@ class Game:
 
     def _draw(self) -> None:
         """ Create elements and draw the game """
-        pass
+        max_tries = 10
+        tries = 0
+
+    def _solution(self) -> str:
+        """ Return a solution word from file """
+        file_handler = open(WORD_FOLDER + '/words.txt').read().split()
+        solution = random.choice(file_handler)
+        return solution
