@@ -4,6 +4,14 @@ import random
 import os
 
 
+# Colour and screen size
+WIDTH = 1000
+HEIGHT = 800
+BUTTON_COLOUR = (153, 204, 255)
+WHITE = (255, 255, 255)
+TEXT_COLOUR = (0, 0, 0)
+
+# Parent directory and directory with folder that contains words file
 PARENT_FOLDER = os.path.dirname(os.path.dirname(__file__))
 WORD_FOLDER = os.path.join(PARENT_FOLDER + '/words')
 
