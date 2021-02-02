@@ -2,8 +2,6 @@
 
 This is a simple Rock-Paper-Scissor game between you and the computer.
 
-This game is made with the pygame module and gives a simple GUI with images and a score counter.
-
 Better solutions are most likely out there, but this was my first go at using the pygame module.
 
 ## GUI
@@ -37,9 +35,9 @@ $ pip3 install pygame
 
 The first one is usually used on Windows when you only have on Python version installed.
 
-The second one is usually used on macOS, because the system uses Python@2.7 and typing *pip* instead of *pip3* will install it on Python@2.7
+The second one is usually used on macOS, because the system uses Python@2.7 and typing _pip_ instead of _pip3_ will install it on Python@2.7
 
-*pip3* makes sure the module is installed on the Python@3 version that you have installed.
+_pip3_ makes sure the module is installed on the Python@3.x.x version that you have installed.
 
 ## How to run
 
@@ -50,5 +48,3 @@ $ python3 game.py
 ```
 
 in your terminal window and the game will start.
-
-The *src* folder contains the source file.
