@@ -2,8 +2,6 @@
 
 This is a simple Hangman game that is GUI based.
 
-The words are choosen at random for each round.
-
 The folder _words_ contains a .txt file with all the words.
 
 I got the words by typing
