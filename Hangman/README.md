@@ -21,5 +21,3 @@ $ python3 main.py
 ```
 
 in your terminal window and the game will start.
-
-The _src_ folder contains source files.
