@@ -1,13 +1,11 @@
 # GameOfLife
 
-This is a game that follows the rules of Conway's Game of Life  
+This is a terminal based game that follows the rules of Conway's Game of Life
 (LINK: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
-
-The game is terminal based and implemented in Python.
 
 ## How to run
 
-Download/Clone the repo and enter the *src* folder and type
+Download/Clone the repo, enter the *src* folder and type
 
 ```
 $ python3 main.py -h
