@@ -1,21 +1,13 @@
 # TicTacToe
 
-This is a TicTacToe game.
-
-It is currently terminal based and uses the terminal for input/output.
+This is a simple TicTacToe game made with the pygame module to give it GUI.
 
 ## How to run
 
-Download/Clone the repo and enter the src folder and type
+Download/Clone the repo, enter the src folder and type
 
 ```
 $ python3 main.py 
 ```
 
 in your terminal window and the game will start.
-
-The *src* folder contains source files.
-
-## Future features
-
-1. Make game with GUI
