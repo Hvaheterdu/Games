@@ -12,5 +12,3 @@ $ python3 main.py -h
 ```
 
 in the terminal window. Since the program uses *argparse*, an information table will appear with a description on how to run the program
-
-The *src* folder contains source files.
