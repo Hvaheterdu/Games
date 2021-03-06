@@ -17,9 +17,9 @@ This is an example of how the game looks when you play it
 <img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png" width="700">
 
 
-## Install packages
+## Prerequisite
 
-Make sure the pygame packages is installed.
+Make sure the ***pygame*** packages is installed.
 
 If you don't have it installed, it can be installed by typing
 
