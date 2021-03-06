@@ -14,7 +14,7 @@ in the terminal on my MacBook Pro.
 
 ## How to run
 
-Download/Clone the repo, enter the src folder and type
+Download/Clone the repo, enter the *src* folder and type
 
 ```
 $ python3 main.py 
