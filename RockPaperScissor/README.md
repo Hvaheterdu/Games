@@ -46,7 +46,7 @@ Download/Clone the repo and enter the *src* folder.
 Type
 
 ```
-$ python3 game.py
+$ python3 main.py
 ```
 
 in the terminal window if you are on a Mac and the game will start.
@@ -54,7 +54,7 @@ in the terminal window if you are on a Mac and the game will start.
 Type
 
 ```
-$ python game.py
+$ python main.py
 ```
 
 in the terminal window if you are on a Linux or Windows machine and the game will start.
