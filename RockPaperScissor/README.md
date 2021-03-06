@@ -41,7 +41,7 @@ _pip3_ makes sure the module is installed on the Python@3.x.x version that you h
 
 ## How to run
 
-To start the game, type
+Download/Clone the repo, enter the *src* folder and type
 
 ```
 $ python3 game.py 
