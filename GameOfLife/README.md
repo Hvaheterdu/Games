@@ -13,7 +13,7 @@ Type
 $ python3 main.py -h
 ```
 
-in the terminal window if you are on Mac.
+in the terminal window if you are on a Mac.
 
 Type
 
@@ -21,6 +21,6 @@ Type
 $ python main.py -h
 ```
 
-in the terminal window if you are on Linux or Windows. 
+in the terminal window if you are on a Linux or Windows machine. 
 
 Since the program uses *argparse*, an information table will appear with a description on how to run the program.
