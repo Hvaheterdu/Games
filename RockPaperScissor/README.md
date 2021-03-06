@@ -19,7 +19,7 @@ This is an example of how the game looks when you play it
 
 ## Prerequisite
 
-Make sure the ***pygame*** packages is installed.
+The ***pygame*** package need to be installed.
 
 If you don't have it installed, it can be installed by typing
 
