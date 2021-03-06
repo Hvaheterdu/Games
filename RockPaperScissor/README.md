@@ -4,19 +4,6 @@ This is a simple Rock-Paper-Scissor game between you and the computer.
 
 Better solutions are most likely out there, but this was my first go at using the pygame module.
 
-## GUI
-
-As said, this is a very simple GUI.
-
-When you start the program you are greeted with a "home screen", that looks like
-
-<img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/home_screen.png" width="700">
-
-This is an example of how the game looks when you play it
-
-<img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png" width="700">
-
-
 ## Prerequisite
 
 The ***pygame*** package need to be installed.
@@ -56,3 +43,15 @@ $ python main.py
 ```
 
 in the terminal/Powershell window if you are on a Linux or Windows machine and the game will start.
+
+## GUI
+
+As said, this is a very simple GUI.
+
+When you start the program you are greeted with a "home screen", that looks like
+
+<img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/home_screen.png" width="700">
+
+This is an example of how the game looks when you play it
+
+<img src="https://github.com/Hvaheterdu/Games/blob/master/RockPaperScissor/game_screen.png" width="700">
