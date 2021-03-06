@@ -21,6 +21,6 @@ Type
 $ python main.py -h
 ```
 
-in the terminal window if you are on a Linux or Windows machine. 
+in the terminal/Powershell window if you are on a Linux or Windows machine. 
 
 Since the program uses *argparse*, an information table will appear with a description on how to run the program.
