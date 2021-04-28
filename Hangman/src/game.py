@@ -35,9 +35,9 @@ class Hangman:
         # Create screen, fill background and add window title
         self.screen = self._create_screen()
         self.screen.fill(WHITE)
-        pygame.display.set_caption('Rock Paper Scissor')
+        pygame.display.set_caption('Hangman')
 
-        # Loop for when user is guessing correct word
+        # Loop for when user is guessing the word
         while tries < max_tries:
             pass
 
