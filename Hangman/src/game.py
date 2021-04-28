@@ -36,8 +36,12 @@ class Hangman:
         self.screen = self._create_screen()
         self.screen.fill(WHITE)
         pygame.display.set_caption('Hangman')
+        
+        # Draw underline for every word
+        for i in len(solution):
+            pass
 
-        # Loop for when user is guessing the word
+        # Loop for when the user is guessing the word
         while tries < max_tries:
             pass
 
