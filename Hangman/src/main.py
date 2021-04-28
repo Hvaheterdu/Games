@@ -3,7 +3,7 @@ from game import Hangman
 
 
 def main() -> None:
-    """Main method were we start the game """
+    """Main method were we start the game"""
     # Start game
     game = Hangman()
     game.play()
