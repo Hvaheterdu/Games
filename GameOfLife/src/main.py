@@ -4,7 +4,7 @@ import argparse
 
 
 def main() -> None:
-    """ Creates board and runs the game """
+    """Creates board and runs the game """
     parser = argparse.ArgumentParser(
         description='Conways Game of life that runs for as many generations as you like')
 

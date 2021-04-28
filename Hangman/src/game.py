@@ -19,20 +19,34 @@ WORD_FOLDER = os.path.join(PARENT_FOLDER + '/words')
 class Hangman:
 
     def __init__(self) -> None:
-        """ Constructor """
+        """Constructor """
         pygame.init()
 
     def play(self) -> None:
-        """ Start the game """
-        self._draw()
+        """Start the game """
+        self._game()
 
-    def _draw(self) -> None:
-        """ Create elements and draw the game """
+    def _game(self) -> None:
+        """Create elements and draw the game """
+        solution = self._solution().lower()
         max_tries = 10
         tries = 0
 
+        # Create screen, fill background and add window title
+        self.screen = self._create_screen()
+        self.screen.fill(WHITE)
+        pygame.display.set_caption('Rock Paper Scissor')
+
+        # Loop for when user is guessing correct word
+        while tries < max_tries:
+            pass
+
     def _solution(self) -> str:
-        """ Return a solution word from file """
+        """Return a solution word from file """
         file_handler = open(WORD_FOLDER + '/words.txt').read().split()
         solution = random.choice(file_handler)
         return solution
+
+    def _create_screen(self) -> pygame.Surface:
+        """Create screen to draw on """
+        return pygame.display.set_mode((WIDTH, HEIGHT))

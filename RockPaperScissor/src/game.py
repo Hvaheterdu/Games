@@ -31,15 +31,15 @@ CHOICES = [ROCK, PAPER, SCISSOR]
 class RockPaperScissor:
 
     def __init__(self) -> None:
-        """ Constructor """
+        """Constructor """
         pygame.init()
 
     def play(self) -> None:
-        """ Start the game """
+        """Start the game """
         self._draw()
 
     def _draw(self) -> None:
-        """ Create elements and draw the game """
+        """Create elements and draw the game """
         computer_choice = 0
         computer_score = 0
         player_score = 0
@@ -191,15 +191,15 @@ class RockPaperScissor:
         return self._text, self._text_rect
 
     def _rect_pos(self, rect_obj) -> tuple:
-        """ Return x, y coordinate for center of rectangle """
+        """Return x, y coordinate for center of rectangle """
         return rect_obj.centerx, rect_obj.centery
 
     def _create_screen(self) -> pygame.Surface:
-        """ Create screen to draw on """
+        """Create screen to draw on """
         return pygame.display.set_mode((WIDTH, HEIGHT))
 
     def _create_rect(self, x, y, width, height) -> pygame.rect.Rect:
-        """ Create rectangle with width and height on x and y coordinate """
+        """Create rectangle with width and height on x and y coordinate """
         return pygame.Rect(x, y, width, height)
 
     def _show_score(self, screen, inp, x, y):
@@ -250,11 +250,11 @@ class RockPaperScissor:
         return pygame.transform.smoothscale(image, (x, y))
 
     def _draw_rect(self, screen, colour, rect_obj) -> pygame.rect.Rect:
-        """ Draw rectangle on screen with given colour """
+        """Draw rectangle on screen with given colour """
         return pygame.draw.rect(screen, colour, rect_obj)
 
     def _draw_title(self, screen, inp) -> None:
-        """ Draw title on screen with input inp """
+        """Draw title on screen with input inp """
         self._text, self._text_rect = self._set_font(
             inp, 'Calibri', 40, TEXT_COLOUR)
         self._text_rect.center = ((WIDTH / 2), (HEIGHT / 10))
